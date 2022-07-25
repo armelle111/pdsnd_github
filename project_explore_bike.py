@@ -9,7 +9,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-
+    add j =0
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -21,28 +21,27 @@ def get_filters():
     months = ["january","february","march","april","may","june","all"]
     days = ["monday","tuesday","wednesday","thursday","friday","saturday","sunday","all"]
     i = 0
+<<<<<<< HEAD
     j = 1
+||||||| 51e30e7
+=======
+    j = 0
+>>>>>>> refactoring
     while True:
         city = input("enter a name of city: ").lower()
         if city in cities:
             break
-            
+
+    # TO DO: get user input for month (all, january, february, ... , june)            
     while True:
         month = input("enter the month to filter, or all :").lower()
         if month in months:
             break
-        
+    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)        
     while True:
         day = input("enter the day to filter, or all :").lower()
         if day in days:
             break          
-
-
-    # TO DO: get user input for month (all, january, february, ... , june)
-
-
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-
 
     print('-'*40)
     return city, month, day
@@ -203,7 +202,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart my Dear? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
