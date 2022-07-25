@@ -26,23 +26,17 @@ def get_filters():
         city = input("enter a name of city: ").lower()
         if city in cities:
             break
-            
+
+    # TO DO: get user input for month (all, january, february, ... , june)            
     while True:
         month = input("enter the month to filter, or all :").lower()
         if month in months:
             break
-        
+    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)        
     while True:
         day = input("enter the day to filter, or all :").lower()
         if day in days:
             break          
-
-
-    # TO DO: get user input for month (all, january, february, ... , june)
-
-
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-
 
     print('-'*40)
     return city, month, day
